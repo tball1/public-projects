@@ -8,7 +8,7 @@ import (
 
 func main() {
     argLen := len(os.Args)
-    if argLen <= 3 {
+    if argLen <= 2 {
         fmt.Println("USAGE: program.exe [encrypt/decrypt] [text]")
         os.Exit(0)
     }
@@ -21,6 +21,7 @@ func main() {
         var text Encryptor = []byte(join[:])
         fmt.Println(text.Encrypt())
     }
+
 
     if mode == "decrypt" {
         join := strings.Join(text," ")
